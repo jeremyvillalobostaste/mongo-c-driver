@@ -755,7 +755,6 @@ test_wire_version (void)
    BSON_ASSERT (future_get_bool (future));
    BSON_ASSERT (!mongoc_cursor_error (cursor, &error));
 
-   request_destroy (request);
    future_destroy (future);
    mongoc_cursor_destroy (cursor);
    mongoc_collection_destroy (collection);
